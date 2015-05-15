@@ -62,6 +62,21 @@
     
     [primus on:@"data" listener:^(NSDictionary *data, id raw) {
         NSLog(@"[data] - Received data: %@", data);
+        if ([data[@"context"] isEqualToString:@"api"]) {
+            if (data[@"welcome"] != nil) {
+                // {"event":"detailsView"}
+                [primus write:@{@"event" : @"detailsView"}];
+            }
+        } else if ([data[@"context"] isEqualToString:@"response"]) {
+            
+            if ([data[@"messageCount"] intValue] == 1){
+                // {"event":"roomAdd","room":"defaultRoom"}
+                [primus write:@{@"event" : @"roomAdd", @"room" : @"defaultRoom"}];
+            } else if ([data[@"messageCount"] intValue] == 2){
+                // {"event":"say","room":"defaultRoom","message":"HelloWorld!"}
+                [primus write:@{@"event" : @"say", @"room" : @"defaultRoom", @"message" : @"HelloWorld from ObjC!"}];
+            }
+        }
     }];
     
     [primus on:@"end" listener:^{
