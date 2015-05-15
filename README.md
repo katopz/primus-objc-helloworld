@@ -1,8 +1,6 @@
 # primus-objc-helloworld
 Hello world [Primus](https://github.com/primus/primus) with [Objective-C](https://github.com/seegno/primus-objc) via [ActionHeroJS](http://www.actionherojs.com/)
-
 ![ActionHeroJS](https://cloud.githubusercontent.com/assets/97060/7652203/4c4c3724-fb34-11e4-8b98-d4a1e9fe70ab.png)
-
 Prerequisite
 ---
 * Client : [Primus Objective-C](https://github.com/seegno/primus-objc)
