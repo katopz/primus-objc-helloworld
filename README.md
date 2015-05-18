@@ -17,11 +17,11 @@ Go to `primus-objc-helloworld` folder
 ```shell
 $ cd primus-objc-helloworld
 ```
-Install pod in `primus-objc-helloworld` folder
+Install pod (in `primus-objc-helloworld` folder)
 ```shell
 $ pod install
 ```
-Start server
+Start ActionHeroJS Server (in `ActionHeroJS` folder)
 ```shell
 $ npm start
 ```
